@@ -6,7 +6,7 @@ function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg  bg-body-tertiary" style={{backgroundColor:"#ffff"}}>
         <div class="container p-2">
-          <img src="media/images/logo.svg" style={{width:"12%"}}/>
+          <img src="media/images/logo.svg" alt="zerodha logo" style={{width:"12%"}}/>
           <button
             class="navbar-toggler"
             type="button"
