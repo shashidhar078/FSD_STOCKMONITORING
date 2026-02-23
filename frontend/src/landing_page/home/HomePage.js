@@ -10,14 +10,14 @@ import OpenAccount from '../OpenAccount'
 function HomePage() {
   return (
     <div>
-      <Navbar/>
+      
       <Hero/>
       <Awards/>
       <Stats/>
       <Pricing/>
       <Education/>
       <OpenAccount/>
-      <Footer/>
+      
 
     </div>
   )
