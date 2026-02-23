@@ -16,7 +16,7 @@ function Hero() {
             src="media/images/nithinKamath.jpg"
           />
           <h5 className="mt-3">Nithin Kamath</h5>
-          <h6>Founder, CEO</h6>
+          <h6>Founder, CEO </h6>
         </div>
         <div className="col-6 p-3">
           <p>
