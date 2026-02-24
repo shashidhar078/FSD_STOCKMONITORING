@@ -17,7 +17,8 @@ function LeftSection({
         </div>
         <div className="col-6 p-5 mt-5">
           <h1>{productName}</h1>
-          <p>{productDescription}</p>
+          <br/>
+          <p className="text-muted">{productDescription}</p>
           <div>
             <a href={tryDemo} style={{ textDecoration: "none" }}>
             Try demo
