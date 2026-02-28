@@ -6,9 +6,8 @@ import Hero from './Hero';
 function SupportPage() {
   return (
     <div>
-      <h1>SupportPage</h1>
-      <CreateTicket/>
       <Hero/>
+      <CreateTicket/>
     </div>
   )
 }
