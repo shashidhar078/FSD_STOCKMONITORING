@@ -23,6 +23,27 @@ code {
   line-height: 1;
 }
 
+#supportHero{
+  background-color: rgb(56,126,209);
+  color:white;
+}
 
+#supportWrapper{
+  display:flex;
+  justify-content: space-between;
+  margin:0 100px;
+}
+
+#supportHero a{
+  color:white
+}
+
+#supportHero input{
+  padding:20px 50px;
+  width:100%;
+  border-radius: 10px;
+  font-size:20px;
+  border-style: none;
+}
 
 
