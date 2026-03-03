@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {watchlist} from "../data/data.js"
-import {Toolkit,Grow} from "@mui/material"
-import {KeyboardArrowDown,KeyboardArrowUp} from "@mui/icons-material"
+import {Tooltip,Grow} from "@mui/material"
+import {KeyboardArrowDown,KeyboardArrowUp,BarChartOutlined,MoreHoriz} from "@mui/icons-material"
 
 const WatchList = () => {
   return (
@@ -55,6 +55,48 @@ const WatchListItem=({stock})=>{
             <span className="price">{stock.price}</span>
           </div>
           </div>
+          {showWatchlistActions && <WatchlistItems uid={stock.name}/>}
         </li>
     )
+}
+
+const WatchlistItems = ({uid})=>{
+  return(
+    <span className="actions">
+      <span>
+        <Tooltip
+        title="Buy (B)"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}>
+          <button className="buy">Buy</button>
+        </Tooltip>
+        <Tooltip
+        title="Sell (S)"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}>
+          <button className="sell">Sell</button>
+        </Tooltip>
+        <Tooltip
+        title="Analytics (A)"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}>
+          <button className="action-btn">
+            <BarChartOutlined className="icon"/>
+          </button>
+        </Tooltip>
+        <Tooltip
+        title="More (M)"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}>
+            <button className="action-btn">
+            <MoreHoriz className="icon"/>
+          </button>
+        </Tooltip>
+      </span>
+    </span>
+  )
 }
