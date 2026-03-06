@@ -2,9 +2,10 @@ require('dotenv').config();
 
 
 
+
 const express=require('express')
 const mongoose=require('mongoose')
-
+const {HoldingsModel}=require('./model/HoldingsModel');
 const {PositionsModel}=require('./model/PositionsModel');
 const uri=process.env.MONGO_URL;
 const port=process.env.PORT || 3001;
@@ -181,6 +182,16 @@ const app=express();
 // })
 //     res.send("Done")
 // })
+
+app.get("/addHoldings",async (req,res)=>{
+    let allHoldings=await HoldingsModel.find({});
+    res.json(allHoldings);
+})
+
+app.get("/addPositions",async (req,res)=>{
+    let allPositions=await PositionsModel.find({});
+    res.json(allPositions);
+})
 
 app.listen(3001,()=>{
     console.log(`app is listening on ${port}`);
