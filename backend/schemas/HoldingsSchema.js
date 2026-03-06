@@ -1,4 +1,4 @@
-const Schema = requrie('mongoose');
+const {Schema} = require('mongoose');
 
 
 
@@ -11,4 +11,4 @@ const HoldingsSchema=new Schema({
     day: String,
 });
 
-modules.export={HoldingsSchema};
+module.exports={HoldingsSchema};
