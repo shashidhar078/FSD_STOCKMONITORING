@@ -2,13 +2,15 @@ const Schema = requrie('mongoose');
 
 
 
-const HoldingsSchema=new Schema({
+const PositionsSchema=new Schema({
+    product: String,
     name: String,
     qty: Number,
     avg: Number,
     price: Number,
-    net:String,
+    net: String,
     day: String,
+    isLoss: Boolean,
 });
 
-modules.export={HoldingsSchema};
+modules.export={PositionsSchema};
