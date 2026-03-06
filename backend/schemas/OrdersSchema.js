@@ -1,4 +1,4 @@
-const Schema = requrie('mongoose');
+const {Schema} = require('mongoose');
 
 
 
@@ -10,4 +10,4 @@ const OrdersSchema=new Schema({
    
 });
 
-modules.export={OrdersSchema};
+module.exports={OrdersSchema};

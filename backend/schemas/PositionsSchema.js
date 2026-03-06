@@ -1,4 +1,4 @@
-const Schema = requrie('mongoose');
+const {Schema} = require('mongoose');
 
 
 
@@ -13,4 +13,4 @@ const PositionsSchema=new Schema({
     isLoss: Boolean,
 });
 
-modules.export={PositionsSchema};
+module.exports={PositionsSchema};
