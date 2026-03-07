@@ -8,6 +8,7 @@ const mongoose=require('mongoose')
 const cors=require('cors')
 const {HoldingsModel}=require('./model/HoldingsModel');
 const {PositionsModel}=require('./model/PositionsModel');
+const {OrdersModel}=require('./model/OrdersModel');
 const uri=process.env.MONGO_URL;
 const port=process.env.PORT || 3001;
 
@@ -193,6 +194,18 @@ app.get("/addHoldings",async (req,res)=>{
 app.get("/addPositions",async (req,res)=>{
     let allPositions=await PositionsModel.find({});
     res.json(allPositions);
+})
+
+app.post("/newOrder",async (req,res)=>{
+    let newOrders= await new OrdersModel({
+        name: req.body.name,
+        qty: req.body.qty,
+        price: req.body.price,
+        mode: req.body.mode
+    });
+
+    newOrders.save();
+    res.send("Orders saved");
 })
 
 app.listen(3001,()=>{
